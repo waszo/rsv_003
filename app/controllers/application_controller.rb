@@ -1,7 +1,21 @@
 class ApplicationController < ActionController::Base
-    def index
+    before_action :configure_permitted_parameters, if: :devise_controller?
+    before_action :set_search
+    
+  protected
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+      devise_parameter_sanitizer.permit(:account_update, keys: %i(avatar))
     end
-  
-    def show
+
+    def set_search
+      @search = Room.ransack(params[:q]) #ビューファイルから送られてくるパラメーター
+      @search.build_condition(adress_cont: params[:adress_cont]) if params[:adress_cont].present?
+      #build_condition メソッドは、指定された条件を @search オブジェクトに追加する。
+      @rooms = @search.result
+      #@search.result は、検索条件に基づいて実際の検索を行い、結果を取得
+      #@rooms 変数に検索結果が格納
     end
+   
 end
+
