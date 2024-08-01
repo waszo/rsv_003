@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'homes/top'
   get 'reservations/index'
   get 'rooms/index'
   # ログイン、アカウント編集後、任意のページに推移させるための記述
@@ -24,8 +23,8 @@ devise_scope :user do
   get 'reservations/:id/edit', to: 'reservations#edit'
 
   post 'reservations/confirm'
-  
-  #newからdeleteまでのルーテイング
+
+#newからdeleteまでのルーテイング
   resources :reservations
   resources :users
   resources :rooms do
@@ -40,4 +39,7 @@ devise_scope :user do
     put 'update', to: 'registrations#update'
   
   end
+
+
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

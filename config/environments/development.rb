@@ -1,8 +1,6 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.hosts.clear
-
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -77,6 +75,6 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   # デバイスのメール設定
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }  
-
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.i18n.default_locale = :ja
 end

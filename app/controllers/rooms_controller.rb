@@ -9,7 +9,7 @@ class RoomsController < ApplicationController
   @room=Room.new
   end
 
-  def create #データベースに保存するところ
+  def create #データベースに保存
     @user = current_user
     @room = Room.new(params.require(:room).permit(:name, :description, :price, :adress,:image_room).merge(user_id: current_user.id))
     #@room.image_room = "defolt_room_image.png"
@@ -70,6 +70,4 @@ class RoomsController < ApplicationController
    
   end
 
-  
-  
 end
