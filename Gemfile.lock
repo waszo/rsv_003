@@ -281,9 +281,11 @@ DEPENDENCIES
   devise
   devise-i18n
   devise-i18n-views
+  image_processing (~> 1.2)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mini_magick
+  pry-rails
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (>= 6.1.3.2)
