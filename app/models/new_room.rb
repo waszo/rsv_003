@@ -1,0 +1,2 @@
+class NewRoom < ApplicationRecord
+end
