@@ -11,7 +11,6 @@ class UsersController < ApplicationController
       
       
     def account
-      
       @user = current_user
      
     end
@@ -40,7 +39,6 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :image_name, :self_introduction)
     end
      
-
 end
   
 

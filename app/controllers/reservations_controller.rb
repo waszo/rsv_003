@@ -70,9 +70,6 @@ class ReservationsController < ApplicationController
     end
 
 
-
-
-
   private
   def reservation_params
     params.require(:reservation).permit(:start_date, :finish_date, :number_of_people, :room_id, :user_id)
