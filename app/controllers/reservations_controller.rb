@@ -34,10 +34,10 @@ class ReservationsController < ApplicationController
    
     @reservation=Reservation.new(params.require(:reservation).permit(:start_date, :finish_date, :number_of_people, :user_id, :room_id))
     if @reservation.save
-      flash[:notice] = "予約に成功しました"
+      flash[:notice] = "予約成功"
       redirect_to reservations_path
     else
-      flash[:notice] = "予約に失敗しました"
+      flash[:notice] = "予約失敗"
       render "rooms/show"
     end
   end

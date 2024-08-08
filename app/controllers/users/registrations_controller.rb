@@ -4,7 +4,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
   before_action :authenticate_user! 
-    #ユーザーが認証澄香どうか
+    #ユーザーが認証機能
 
   def edit_profile
 

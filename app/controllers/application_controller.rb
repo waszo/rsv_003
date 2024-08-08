@@ -13,8 +13,10 @@ class ApplicationController < ActionController::Base
       @search.build_condition(adress_cont: params[:adress_cont]) if params[:adress_cont].present?
       #build_condition メソッドは、指定された条件を @search オブジェクトに追加する。
       @rooms = @search.result
-      #@search.result は、検索条件に基づいて実際の検索を行い、結果を取得
-      #@rooms 変数に検索結果が格納
+      #@search.result は、検索条件に基づいて実際の検索を行い、結果を取得する。
+      #@rooms 変数には、検索結果が格納される。
+
+
     end
    
 end

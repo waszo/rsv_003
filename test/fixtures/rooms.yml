@@ -2,14 +2,14 @@
 
 one:
   name: MyString
+  description: MyText
   price: 9.99
-  adress: MyString
   image_room: MyString
   user_id: 1
 
 two:
   name: MyString
+  description: MyText
   price: 9.99
-  adress: MyString
   image_room: MyString
   user_id: 1

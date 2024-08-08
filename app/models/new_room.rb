@@ -1,2 +1,0 @@
-class NewRoom < ApplicationRecord
-end
