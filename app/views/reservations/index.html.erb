@@ -15,6 +15,7 @@
   </thead>
   <tbody>
     <% @reservations.each do |reservation| %>
+      <% binding.pry %>
       <tr>
         <td>
         <% room = reservation.room %>

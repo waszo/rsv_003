@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :authenticate_user! 　#ユーザーが認証機能
+  before_action :authenticate_user! #ユーザーが認証機能
     #ユーザーが認証機能
   def edit_profile
 
