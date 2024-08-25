@@ -9,7 +9,7 @@ class ReservationsController < ApplicationController
     #@reservation = Reservation.new(reservation_params)
     @reservation = Reservation.new(params.require(:reservation).permit(:start_date, :finish_date, :number_of_people, :room_id, :user_id))
     
-    @room = Room.find(params[:reservation][:room_id])#reservationモデルに関するデータの中の、room_idが予約が行われるroomのidだから、これからひっぱている
+    @room = Room.find(params[:reservation][:room_id])#reservationモデルに関するデータの中の、room_idが予約が行われるroomのidだから、これからひっぱっている
     @user = User.find(params[:reservation][:user_id])
    
 
